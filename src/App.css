@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+.data-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #438CC7;
+  padding: 30px 0;
+  /* height: 30vh; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  height: 100vh;
+  overflow-y: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width:850px) {
+  .main {
+    height: 100%;
+    overflow-y: scroll;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.child-element {
+  border: 8px solid#336892;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #517390;
+}
+
+.child-element p {
+  margin-bottom: unset !important;
+  margin-top: 0.5em !important;
+}
+
+.child-element p:nth-child(1) {
+  color: #438CC7;
+  font-weight: 500;
+}
+
+.child-element p:nth-child(2) {
   color: white;
+  font-weight: 500;
+  font-size: 1.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.data-wrapper {
+  background-color: #438CC7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.customize-data-container {
+  background-color: #3A4045;
+  padding: 100px;
+  height: 100%;
+  /* height: 50vh; */
+}
+
+.customize-data-container button {
+  cursor: pointer;
+}
+
+.input-container, .data-buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.number-input {
+  padding: 0.8em;
+  border-radius: 15px 0px 0px 15px;
+  border: unset;
+}
+
+.number-input:focus-visible {
+  outline: unset;
+}
+
+.submit-button {
+  padding: 0.8em;
+  border-radius: 0px 15px 15px 0px;
+  width: 120px;
+  color: white;
+  background-color: #FFC300;
+  border: unset;
+}
+
+::placeholder { 
+  color:#FFC300;
+}
+
+.data-buttons-container {
+  margin-top: 50px;
+}
+
+.reload-button {
+  padding: 0.8em;
+  border-radius: 15px;
+  color: white;
+  background-color: #FFC300;
+  border: unset;
+}
+
+.reload-button:nth-child(1) {
+  margin-right: 60px;
+}
+
+.reload-button:nth-child(2) {
+  margin-left: 60px;
 }
